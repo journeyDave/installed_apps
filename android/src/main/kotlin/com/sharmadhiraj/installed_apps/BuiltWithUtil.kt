@@ -27,7 +27,7 @@ class BuiltWithUtil {
                     "native_or_others"
                 }
             }
-            catch (Exception e) {
+            catch (e: Exception) {
                 return ""
             }
         }

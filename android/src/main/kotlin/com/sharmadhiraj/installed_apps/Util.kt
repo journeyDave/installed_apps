@@ -30,7 +30,7 @@ class Util {
                 map["built_with"] = BuiltWithUtil.getPlatform(packageInfo.applicationInfo)
                 map["installed_timestamp"] = File(packageInfo.applicationInfo.sourceDir).lastModified()
             }
-            catch (Exception e) {
+            catch (e: Exception) {
                 map["version_name"] = ""
                 map["version_code"] = 0L
                 map["built_with"] = ""
