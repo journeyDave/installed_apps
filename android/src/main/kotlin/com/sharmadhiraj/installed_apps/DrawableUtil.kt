@@ -10,6 +10,11 @@ class DrawableUtil {
 
     companion object {
         fun drawableToByteArray(drawable: Drawable): ByteArray {
+
+            if (drawable.intrinsicWidth <= 0 || drawable.intrinsicHeight <= 0) {
+                return ByteArray(0)
+            }
+
             val bitmap = drawableToBitmap(drawable)
             ByteArrayOutputStream().use { stream ->
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
